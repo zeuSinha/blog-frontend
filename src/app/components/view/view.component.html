@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md" >
+      <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <a class="navbar-brand" [routerLink]="['/view']" >Home</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a class="navbar">About</a>
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/post']" >Post a Blog</a>
+                </li>
+            <li class="nav-item">
+              <a class="nav-link">My blogs</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Hi, {{name}}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item">Profile</a>
+                <a class="dropdown-item">Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="row card-row">
+    <div class="col-lg-6" *ngFor="let blog of allBlog">
+      <div class="card">
+        <div class="card-header">
+          Description: {{blog.description}}
+          
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Title: {{blog.title | uppercase}}</h5>
+          <p class="card-text">Body: {{blog.blogBody}}</p>
+          <a class="btn btn-success">Read blog</a>
+        </div>
+        <div class="card-footer">
+          <p>
+              Author: {{blog.author}} <br>
+              Posted on: {{blog.postedOn | date}}
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

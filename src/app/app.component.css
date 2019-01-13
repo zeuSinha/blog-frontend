@@ -1,0 +1,11 @@
+.container{
+    padding: 3%;
+    background-color: chocolate;
+}
+
+.container h1{
+    font-style: italic;
+    text-align: center;
+    font-size: 3em;
+    color: beige;
+}

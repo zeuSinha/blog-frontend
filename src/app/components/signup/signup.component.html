@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-centered">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" [(ngModel)]="name" autofocus required>
+        </div>
+      
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" [(ngModel)]="email" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="text" class="form-control" [(ngModel)]="password" required>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-success btn-block" (click)="signup()">Signup</button>
+        </div>
+
+    </div>
+
+    <div class="col-md-4 login" >
+      <h3>Already have account</h3>
+      <button class="btn btn-primary" [routerLink]="['/login']" >Login</button>
+    </div>
+  </div>
+</div>
